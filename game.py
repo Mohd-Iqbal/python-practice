@@ -4,8 +4,8 @@ list = ["rock","paper","scissors"]
 
 while True:
     player_choice = None
-    while player_choice not in list:
-        player_choice = input("Your choice ").lower().strip()
+    while (player_choice := input("Your choice ").lower().strip()) not in list:
+        print("Invalid, choose again")
     computer_choice = random.choice(list)
     print("Your choice is "+player_choice)
     print("Computer choice is "+computer_choice)
